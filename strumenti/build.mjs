@@ -43,7 +43,7 @@ scrivi(
   [
     'Componenti di terze parti usati in questo sito',
     '',
-    '== React Bits (SplitText, CircularText, CurvedLoop) ==',
+    '== React Bits (SplitText, CurvedLoop) ==',
     leggi('sorgente/js/react-bits/LICENSE-react-bits.md'),
     '',
     '== GSAP ==',
@@ -63,7 +63,6 @@ scrivi(
 // ---------- CSS ----------
 const cssSorgente = [
   leggi('sorgente/css/sito.css'),
-  leggi('sorgente/js/react-bits/CircularText.css'),
   leggi('sorgente/js/react-bits/CurvedLoop.css'),
   leggi('sorgente/css/ritocchi-react-bits.css')
 ].join('\n');
@@ -122,12 +121,13 @@ const MENU = [
 ];
 
 // {{foto:nome}} -> <picture> con le misure in webp e jpg (dati in contenuti/foto.json)
-function picture(nome, extra = '') {
+function picture(nome, sizes) {
   const f = foto[nome];
   if (!f) throw new Error(`Foto sconosciuta: ${nome}`);
+  const sz = sizes || f.sizes;
   const set = est => f.larghezze.map(w => `/assets/img/${nome}-${w}.${est} ${w}w`).join(', ');
   const piu = f.larghezze[f.larghezze.length - 1];
-  return `<picture><source type="image/webp" srcset="${set('webp')}" sizes="${f.sizes}"><img src="/assets/img/${nome}-${piu}.jpg" srcset="${set('jpg')}" sizes="${f.sizes}" width="${f.larghezza}" height="${f.altezza}" alt="${f.alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async"${extra}></picture>`;
+  return `<picture><source type="image/webp" srcset="${set('webp')}" sizes="${sz}"><img src="/assets/img/${nome}-${piu}.jpg" srcset="${set('jpg')}" sizes="${sz}" width="${f.larghezza}" height="${f.altezza}" alt="${f.alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async"></picture>`;
 }
 
 function sostituisci(testo, pagina) {
@@ -139,7 +139,7 @@ function sostituisci(testo, pagina) {
     .replace(/\{\{icona:([\w-]+)(?::([\w -]+))?\}\}/g, (_, n, c) => icona(n, c ? `icona ${c}` : 'icona'))
     .replace(/\{\{muretto:(\d+):(\d)(?::([\w -]+))?\}\}/g, (_, s, n, c) => muretto({ seme: +s, file: +n, classe: c || '' }))
     .replace(/\{\{eventi:(prossimi|passati)(?::(\d+))?\}\}/g, (_, t, m) => blocchiEventi(t, m && +m))
-    .replace(/\{\{foto:([\w-]+)\}\}/g, (_, n) => picture(n))
+    .replace(/\{\{foto:([\w-]+)(?:\|([^}]+))?\}\}/g, (_, n, sz) => picture(n, sz && sz.trim()))
     .replace(/\{\{fiorellino\}\}/g, () => fiorellino())
     .replace(/\{\{nascondi-se-nessun-passato\}\}/g, () => (eventi.some(e => e.data < oggi) ? '' : ' hidden'))
     .replace(/\{\{pagina\.(\w+)\}\}/g, (_, k) => pagina[k] ?? '');

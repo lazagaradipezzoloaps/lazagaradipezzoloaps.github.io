@@ -14,10 +14,10 @@ classe: home
   <div class="eroe__velo"></div>
 
   <div class="eroe__testo">
-    <p class="eroe__sopratitolo">La Zagara di Pezzolo APS</p>
     <div data-isola="titolo">
-      <h1 class="eroe__titolo">Radici <em>e</em> Futuro</h1>
+      <h1 class="eroe__titolo">La Zagara<br> di Pezzolo</h1>
     </div>
+    <p class="eroe__motto">Radici <em>e</em> Futuro APS</p>
     <p class="eroe__sottotitolo">Ci prendiamo cura di Pezzolo, delle sue persone e della sua memoria. Per chi ci vive, per chi ci torna, per chi lo scopre oggi.</p>
     <div class="azioni">
       <a class="bottone bottone--oro" href="/cosa-facciamo/">Scopri cosa facciamo</a>
@@ -27,39 +27,25 @@ classe: home
 
   {{muretto:7:3:muretto--eroe}}
 
-  <div class="eroe__sigillo" data-isola="sigillo" aria-hidden="true">
-    <svg class="sigillo-statico" viewBox="0 0 200 200" focusable="false">
-      <defs><path id="giro-sigillo" d="M100,100 m-79,0 a79,79 0 1,1 158,0 a79,79 0 1,1 -158,0"/></defs>
-      <text font-family="'Atkinson Hyperlegible Next Variable', sans-serif" font-size="15.5" font-weight="700" fill="#3E4C22"><textPath href="#giro-sigillo" textLength="494" lengthAdjust="spacing">LA ZAGARA DI PEZZOLO • RADICI E FUTURO •</textPath></text>
-      <g transform="translate(100 100) scale(1.5)">
-        <path d="M-3 9 C-12 13 -17 20 -16 25 C-10 25 -4 19 -2 12Z" fill="#4F7A13"/>
-        <path d="M3 9 C12 13 17 20 16 25 C10 25 4 19 2 12Z" fill="#4F7A13"/>
-        <g fill="#FCF9F2" stroke="#3E4C22" stroke-width="1.6" stroke-linejoin="round">
-          <path d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
-          <path transform="rotate(72)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
-          <path transform="rotate(144)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
-          <path transform="rotate(216)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
-          <path transform="rotate(288)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
-        </g>
-        <circle r="5" fill="#CFA73E"/>
-        <circle r="2" fill="#3E4C22"/>
-      </g>
-    </svg>
+  <div class="eroe__sigillo">
+    <img src="/assets/img/logo-sigillo-256.webp" srcset="/assets/img/logo-sigillo-256.webp 256w, /assets/img/logo-sigillo-512.webp 512w" sizes="216px" width="512" height="512" alt="" decoding="async">
   </div>
 </section>
 
 <section class="sezione sezione--dopo-eroe">
-  <div class="contenitore due-colonne">
-    <div>
+  <div class="contenitore">
+    <div class="borgo-intro">
       <h2>Il nostro borgo</h2>
+      <div>
       <p>Pezzolo è un borgo collinare del Comune di Messina, tra i Peloritani. Sta aggrappato alla roccia a circa 365 metri, a 24 chilometri dal centro città e a pochi chilometri dalla costa ionica.</p>
       <p>Qui ci sono sentieri da percorrere, muretti a secco da custodire e storie che meritano di essere raccontate. Siamo nate per questo.</p>
       <div class="azioni">
         <a class="bottone bottone--linea" href="/il-borgo/">Vieni a scoprire Pezzolo</a>
       </div>
+      </div>
     </div>
-    <figure class="arco arco--borgo">
-      {{foto:borgo-da-sotto}}
+    <figure class="arco arco--ampio">
+      {{foto:borgo-da-sotto|(max-width: 75rem) 92vw, 1104px}}
     </figure>
   </div>
 </section>

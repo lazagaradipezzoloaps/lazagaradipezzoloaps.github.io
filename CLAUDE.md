@@ -10,8 +10,8 @@ Chi lo aggiorna di solito è Salvo, chiedendo le modifiche in chat. Rispondi in 
 - `sorgente/layout.html` – testata, menu e piede comuni a tutte le pagine.
 - `sorgente/css/sito.css` – stile (colori e misure in `:root`).
 - `sorgente/js/main.js` – menu, eventi passati, scorrimento morbido (Lenis), muretto animato (GSAP).
-- `sorgente/js/isole.js` – tre componenti React Bits usati solo in home: titolo animato (SplitText),
-  sigillo che ruota (CircularText), nastro con i nomi delle aree (CurvedLoop).
+- `sorgente/js/isole.js` – due componenti React Bits usati solo in home: titolo animato (SplitText)
+  e nastro con i nomi delle aree (CurvedLoop).
 - `sorgente/js/react-bits/` – copie dei componenti con la loro licenza (MIT + Commons Clause): non toglierla.
 - `contenuti/sito.json` – dati dell'associazione (email, PEC, link WhatsApp, indirizzo, RUNTS, url del sito).
 - `contenuti/eventi.json` – gli eventi.
@@ -59,6 +59,15 @@ Poi in GitHub → Settings → Pages: dominio personalizzato e "Enforce HTTPS".
 - Niente newsletter e niente moduli: i contatti passano da email e community WhatsApp.
   Il telefono per ora non va pubblicato. Non citare l'autore del libro delle storie.
 - Nelle comunicazioni restano denominazione con "APS", sede, codice fiscale e dati RUNTS (sono nel piede).
+
+## Identità
+
+- In home il titolo grande è "La Zagara di Pezzolo"; "Radici e Futuro APS" sta sotto, più piccolo,
+  così il paese nella foto resta visibile.
+- Il logo si usa SEMPRE così com'è (`assets/img/logo-sigillo-*.webp`): niente versioni ridisegnate,
+  niente rotazioni o modifiche.
+- Le foto si mostrano intere (classe `arco`: solo un arco ribassato in alto), senza ritagli che
+  tolgano parti del paese.
 
 ## Stile
 

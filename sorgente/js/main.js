@@ -128,6 +128,13 @@ function fotoEroe() {
   });
 }
 
+/* ---------- il logo compare con calma, dopo il titolo ---------- */
+function logoEroe() {
+  const logo = document.querySelector('.eroe__sigillo');
+  if (!logo) return;
+  gsap.fromTo(logo, { opacity: 0, scale: 0.82, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: 'power3.out', delay: 1 });
+}
+
 menu();
 testata();
 eventi();
@@ -136,6 +143,7 @@ if (movimento) {
   scorrimento();
   muretti();
   fotoEroe();
+  logoEroe();
   html.classList.add('pronto');
 }
 

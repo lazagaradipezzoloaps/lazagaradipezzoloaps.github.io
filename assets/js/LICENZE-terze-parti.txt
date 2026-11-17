@@ -1,6 +1,6 @@
 Componenti di terze parti usati in questo sito
 
-== React Bits (SplitText, CircularText, CurvedLoop) ==
+== React Bits (SplitText, CurvedLoop) ==
 MIT + Commons Clause License Condition v1.0
 
 Copyright (c) 2026 David Haz

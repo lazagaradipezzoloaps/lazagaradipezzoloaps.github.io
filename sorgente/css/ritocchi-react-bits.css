@@ -8,11 +8,4 @@
   font-variation-settings: 'SOFT' 100, 'WONK' 0;
   aspect-ratio: 100 / 9;
 }
-.eroe__sigillo .circular-text {
-  cursor: default;
-  font-family: var(--sans);
-  color: var(--verde);
-  letter-spacing: 0.06em;
-}
-.eroe__sigillo .circular-text__center svg { width: 40%; height: 40%; }
 .split-parent .split-char { will-change: auto; }

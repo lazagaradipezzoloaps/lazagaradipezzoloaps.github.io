@@ -330,7 +330,7 @@ main:focus { outline: none; }
 .eroe__velo {
   position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(90deg, rgba(31, 42, 20, 0.88) 0%, rgba(31, 42, 20, 0.66) 34%, rgba(31, 42, 20, 0.18) 66%, rgba(31, 42, 20, 0) 100%),
+    linear-gradient(90deg, rgba(31, 42, 20, 0.86) 0%, rgba(31, 42, 20, 0.68) 30%, rgba(31, 42, 20, 0.22) 47%, rgba(31, 42, 20, 0) 60%),
     linear-gradient(0deg, rgba(31, 42, 20, 0.55) 0%, rgba(31, 42, 20, 0) 45%);
 }
 .eroe__testo {
@@ -339,47 +339,49 @@ main:focus { outline: none; }
   margin-inline: auto;
   padding: clamp(4rem, 10vh, 7rem) var(--margine) calc(var(--muro-eroe) + clamp(2.5rem, 6vh, 4rem));
 }
-.eroe__sopratitolo {
-  margin: 0 0 0.9rem;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
-  font-weight: 450;
-}
 .eroe__titolo {
   margin: 0;
-  font-size: clamp(3.5rem, 10.5vw, 8.4rem);
-  font-weight: 480;
-  line-height: 0.94;
-  letter-spacing: -0.025em;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
   font-variation-settings: 'SOFT' 100, 'WONK' 0;
 }
-.eroe__titolo em { font-style: italic; font-weight: 380; }
+.eroe__motto {
+  margin: 0.8rem 0 0;
+  max-width: none;
+  font-family: var(--serif);
+  font-variation-settings: 'SOFT' 50, 'WONK' 0;
+  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+  font-weight: 420;
+  line-height: 1.2;
+}
+.eroe__motto em { font-style: italic; }
 .eroe__sottotitolo {
-  max-width: 36ch;
-  margin: 1.6rem 0 0;
+  max-width: 29ch;
+  margin: 1.5rem 0 0;
+  text-shadow: 0 1px 14px rgba(31, 42, 20, 0.55);
   font-size: clamp(1.15rem, 1.7vw, 1.38rem);
   line-height: 1.5;
 }
 .eroe .azioni { margin-top: 2.2rem; }
 .eroe .muretto { position: absolute; left: 0; right: 0; bottom: -1px; height: var(--muro-eroe); }
 
-/* sigillo che ruota, a cavallo tra la foto e la sezione successiva */
+/* il logo dell'associazione, a cavallo tra la foto e la sezione successiva */
 .eroe__sigillo {
   position: absolute;
   z-index: 3;
   right: max(var(--margine), calc((100vw - var(--largo)) / 2 + var(--margine)));
   bottom: calc(var(--sigillo) / -2);
-  --sigillo: clamp(118px, 13vw, 172px);
+  --sigillo: clamp(140px, 15vw, 216px);
   width: var(--sigillo);
   height: var(--sigillo);
   border-radius: 50%;
   background: var(--crema);
-  color: var(--verde);
-  box-shadow: 0 0 0 4px var(--verde-notte);
+  box-shadow: 0 0 0 4px var(--crema), 0 12px 32px rgba(31, 42, 20, 0.28);
 }
-.eroe__sigillo svg, .eroe__sigillo .circular-text { width: 100% !important; height: 100% !important; }
-.sigillo__fiore { width: 46%; height: 46%; }
+.eroe__sigillo img { width: 100%; height: 100%; border-radius: 50%; }
+.movimento:not(.pronto):not(.attesa-scaduta) .eroe__sigillo { opacity: 0; }
 
 /* titolo animato: resta nascosto per un istante, solo se le animazioni sono attive
    (dopo 2,5 secondi compare comunque, anche se lo script non arriva) */
@@ -393,7 +395,7 @@ main:focus { outline: none; }
     background: linear-gradient(0deg, rgba(31, 42, 20, 0.92) 0%, rgba(31, 42, 20, 0.72) 42%, rgba(31, 42, 20, 0.2) 72%, rgba(31, 42, 20, 0.05) 100%);
   }
   .eroe__testo { padding-bottom: calc(var(--muro-eroe) + var(--sigillo, 118px) / 2 + 2rem); }
-  .eroe__sigillo { --sigillo: 112px; }
+  .eroe__sigillo { --sigillo: 124px; }
 }
 
 /* ---------- sezioni ---------- */
@@ -415,16 +417,26 @@ main:focus { outline: none; }
   .due-colonne--inverse > :first-child { order: 0; }
 }
 
-/* foto ad arco, come i portali in pietra del paese */
+/* foto intere, con un arco ribassato in alto come i portali in pietra del paese */
 .arco { margin: 0; }
 .arco img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 50% 50% 0.6rem 0.6rem / 32% 32% 0.6rem 0.6rem;
+  height: auto;
+  border-radius: 50% 50% 0.6rem 0.6rem / 7% 7% 0.6rem 0.6rem;
   background: var(--crema-antico);
 }
-.arco--largo img { aspect-ratio: 5 / 4; border-radius: 50% 50% 0.6rem 0.6rem / 42% 42% 0.6rem 0.6rem; }
+.arco--ampio { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.arco--ampio img { border-radius: 50% 50% 0.8rem 0.8rem / 9% 9% 0.8rem 0.8rem; }
+
+.borgo-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 1rem clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+.borgo-intro h2 { margin-top: -0.1em; }
+.borgo-intro .azioni { margin-top: 1.5rem; }
+@media (max-width: 52rem) { .borgo-intro { grid-template-columns: minmax(0, 1fr); } }
 .arco figcaption, .foto-intera figcaption {
   margin-top: 0.85rem;
   font-family: var(--serif);
@@ -698,9 +710,6 @@ html:not(.movimento) .sezione--con-nastro { padding-top: var(--sezione); }
 main:has(> .sezione--antica:last-child) + .piede .muretto--piede { background: var(--crema-antico); }
 .pagina-errore main { padding-bottom: clamp(3rem, 6vw, 5rem); }
 
-.arco--borgo img { object-position: 62% 50%; }
-.arco--chiesa img { object-position: 22% 60%; }
-.arco--borgo-storia img { object-position: 60% 50%; }
 
 .nomi-blocco { justify-self: center; }
 
