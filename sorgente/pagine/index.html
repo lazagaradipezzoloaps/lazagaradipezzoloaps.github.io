@@ -1,0 +1,211 @@
+<!--
+titolo: La Zagara di Pezzolo APS – Radici e Futuro | Pezzolo, Messina
+descrizione: Associazione di promozione sociale di Pezzolo (Messina). Aiuto a persone anziane e fragili, cura del borgo, memoria, turismo accessibile, giovani, digitale.
+percorso: /
+classe: home
+-->
+<section class="eroe">
+  <picture class="eroe__foto">
+    <source media="(max-width: 47.99rem)" type="image/webp" srcset="/assets/img/pezzolo-tra-i-monti-verticale-700.webp 700w, /assets/img/pezzolo-tra-i-monti-verticale-1100.webp 1100w" sizes="100vw">
+    <source media="(max-width: 47.99rem)" srcset="/assets/img/pezzolo-tra-i-monti-verticale-700.jpg 700w, /assets/img/pezzolo-tra-i-monti-verticale-1100.jpg 1100w" sizes="100vw">
+    <source type="image/webp" srcset="/assets/img/pezzolo-tra-i-monti-800.webp 800w, /assets/img/pezzolo-tra-i-monti-1400.webp 1400w, /assets/img/pezzolo-tra-i-monti-2000.webp 2000w" sizes="100vw">
+    <img src="/assets/img/pezzolo-tra-i-monti-1400.jpg" srcset="/assets/img/pezzolo-tra-i-monti-800.jpg 800w, /assets/img/pezzolo-tra-i-monti-1400.jpg 1400w, /assets/img/pezzolo-tra-i-monti-2000.jpg 2000w" sizes="100vw" width="1400" height="1050" alt="Le case di Pezzolo raccolte tra i monti Peloritani" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="eroe__velo"></div>
+
+  <div class="eroe__testo">
+    <p class="eroe__sopratitolo">La Zagara di Pezzolo APS</p>
+    <div data-isola="titolo">
+      <h1 class="eroe__titolo">Radici <em>e</em> Futuro</h1>
+    </div>
+    <p class="eroe__sottotitolo">Ci prendiamo cura di Pezzolo, delle sue persone e della sua memoria. Per chi ci vive, per chi ci torna, per chi lo scopre oggi.</p>
+    <div class="azioni">
+      <a class="bottone bottone--oro" href="/cosa-facciamo/">Scopri cosa facciamo</a>
+      <a class="bottone bottone--chiaro" href="{{sito.whatsapp}}">{{icona:whatsapp}}Entra nella community WhatsApp</a>
+    </div>
+  </div>
+
+  {{muretto:7:3:muretto--eroe}}
+
+  <div class="eroe__sigillo" data-isola="sigillo" aria-hidden="true">
+    <svg class="sigillo-statico" viewBox="0 0 200 200" focusable="false">
+      <defs><path id="giro-sigillo" d="M100,100 m-79,0 a79,79 0 1,1 158,0 a79,79 0 1,1 -158,0"/></defs>
+      <text font-family="'Atkinson Hyperlegible Next Variable', sans-serif" font-size="15.5" font-weight="700" fill="#3E4C22"><textPath href="#giro-sigillo" textLength="494" lengthAdjust="spacing">LA ZAGARA DI PEZZOLO • RADICI E FUTURO •</textPath></text>
+      <g transform="translate(100 100) scale(1.5)">
+        <path d="M-3 9 C-12 13 -17 20 -16 25 C-10 25 -4 19 -2 12Z" fill="#4F7A13"/>
+        <path d="M3 9 C12 13 17 20 16 25 C10 25 4 19 2 12Z" fill="#4F7A13"/>
+        <g fill="#FCF9F2" stroke="#3E4C22" stroke-width="1.6" stroke-linejoin="round">
+          <path d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
+          <path transform="rotate(72)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
+          <path transform="rotate(144)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
+          <path transform="rotate(216)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
+          <path transform="rotate(288)" d="M0 -3 C-6.5 -10 -6 -20 0 -25 C6 -20 6.5 -10 0 -3Z"/>
+        </g>
+        <circle r="5" fill="#CFA73E"/>
+        <circle r="2" fill="#3E4C22"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="sezione sezione--dopo-eroe">
+  <div class="contenitore due-colonne">
+    <div>
+      <h2>Il nostro borgo</h2>
+      <p>Pezzolo è un borgo collinare del Comune di Messina, tra i Peloritani. Sta aggrappato alla roccia a circa 365 metri, a 24 chilometri dal centro città e a pochi chilometri dalla costa ionica.</p>
+      <p>Qui ci sono sentieri da percorrere, muretti a secco da custodire e storie che meritano di essere raccontate. Siamo nate per questo.</p>
+      <div class="azioni">
+        <a class="bottone bottone--linea" href="/il-borgo/">Vieni a scoprire Pezzolo</a>
+      </div>
+    </div>
+    <figure class="arco arco--borgo">
+      {{foto:borgo-da-sotto}}
+    </figure>
+  </div>
+</section>
+
+<section class="sezione sezione--antica">
+  <div class="contenitore">
+    <div class="sezione__intro">
+      <h2>Cosa facciamo</h2>
+      <p>Sei aree di impegno, tutte già attive. Trova quella che fa per te: per chiedere una mano o per darla.</p>
+    </div>
+    <ul class="aree">
+      <li class="area">
+        <span class="area__icona">{{icona:tutti-per-uno}}</span>
+        <div>
+          <h3>Tutti per uno</h3>
+          <p>La spesa, i farmaci, un passaggio in città, una telefonata per fare due chiacchiere. Per le persone anziane e fragili del borgo, ci siamo.</p>
+          <a href="/cosa-facciamo/#tutti-per-uno">Scopri di più<span class="vh"> su Tutti per uno</span></a>
+        </div>
+      </li>
+      <li class="area">
+        <span class="area__icona">{{icona:custodi-del-borgo}}</span>
+        <div>
+          <h3>Custodi del borgo</h3>
+          <p>Vicoli e piazze in ordine, sentieri percorribili, muretti a secco che restano in piedi. Il paesaggio di Pezzolo è un'eredità: la trattiamo bene.</p>
+          <a href="/cosa-facciamo/#custodi-del-borgo">Scopri di più<span class="vh"> su Custodi del borgo</span></a>
+        </div>
+      </li>
+      <li class="area">
+        <span class="area__icona">{{icona:il-filo-della-memoria}}</span>
+        <div>
+          <h3>Il filo della memoria</h3>
+          <p>Laboratori in cui chi sa insegna a chi vuole imparare: antichi mestieri e racconti di paese. E un doposcuola per le più giovani e i più giovani.</p>
+          <a href="/cosa-facciamo/#il-filo-della-memoria">Scopri di più<span class="vh"> su Il filo della memoria</span></a>
+        </div>
+      </li>
+      <li class="area">
+        <span class="area__icona">{{icona:vieni-a-scoprirci}}</span>
+        <div>
+          <h3>Vieni a scoprirci</h3>
+          <p>Itinerari senza barriere e un infopoint per chi arriva. Pezzolo si visita con calma, e deve poterlo fare chiunque.</p>
+          <a href="/cosa-facciamo/#vieni-a-scoprirci">Scopri di più<span class="vh"> su Vieni a scoprirci</span></a>
+        </div>
+      </li>
+      <li class="area">
+        <span class="area__icona">{{icona:generazioni-in-moto}}</span>
+        <div>
+          <h3>Generazioni in moto</h3>
+          <p>Tornei e occasioni di incontro per le ragazze e i ragazzi che vogliono restare. Sport dolce per chi ha qualche anno in più.</p>
+          <a href="/cosa-facciamo/#generazioni-in-moto">Scopri di più<span class="vh"> su Generazioni in moto</span></a>
+        </div>
+      </li>
+      <li class="area">
+        <span class="area__icona">{{icona:digitale-per-tutti}}</span>
+        <div>
+          <h3>Digitale per tutti</h3>
+          <p>Telefono e computer non devono essere un ostacolo. Al nostro punto di facilitazione digitale trovi chi ti aiuta, con pazienza.</p>
+          <a href="/cosa-facciamo/#digitale-per-tutti">Scopri di più<span class="vh"> su Digitale per tutti</span></a>
+        </div>
+      </li>
+    </ul>
+    <div class="azioni">
+      <a class="bottone bottone--verde" href="/cosa-facciamo/">Tutte le attività</a>
+    </div>
+  </div>
+</section>
+
+<section class="sezione sezione--con-nastro">
+  <div class="nastro" data-isola="nastro" aria-hidden="true"></div>
+  <div class="contenitore">
+    <div class="sezione__intro">
+      <h2>Eventi</h2>
+      <p>Laboratori, passeggiate, tornei, giornate di cura del borgo: ecco cosa c'è in programma.</p>
+    </div>
+    {{eventi:prossimi:3}}
+    <div class="azioni">
+      <a class="bottone bottone--oro" href="/eventi/">Tutti gli eventi</a>
+      <a class="link-forte" href="{{sito.whatsapp}}">Ricevi gli avvisi su WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="sezione sezione--antica">
+  <div class="contenitore due-colonne">
+    <div>
+      <h2>Chi siamo</h2>
+      <p>La Zagara di Pezzolo è nata il 23 settembre 2026 da sette donne che hanno deciso di non aspettare che ci pensasse qualcun altro. L'idea è semplice: un borgo vive se qualcuno se ne prende cura.</p>
+      <p>Il nostro Direttivo è tutto al femminile, e ne andiamo fiere. La porta però è aperta a tutte e a tutti: socie e soci, volontarie e volontari, di ogni età. Nessuna carica è retribuita.</p>
+      <div class="azioni">
+        <a class="bottone bottone--verde" href="/chi-siamo/">Conosci le fondatrici</a>
+      </div>
+    </div>
+    <div class="nomi-blocco">
+      <p class="nomi__titolo" id="le-fondatrici">Le sette fondatrici</p>
+      <ul class="nomi" aria-labelledby="le-fondatrici">
+        <li>{{fiorellino}}Valeria</li>
+        <li>{{fiorellino}}Angelica</li>
+        <li>{{fiorellino}}Sandra</li>
+        <li>{{fiorellino}}Giovanna</li>
+        <li>{{fiorellino}}Rosalba</li>
+        <li>{{fiorellino}}Emanuela</li>
+        <li>{{fiorellino}}Tania</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sezione">
+  <div class="contenitore">
+    <div class="sezione__intro">
+      <h2>Partecipa</h2>
+      <p>Non serve essere di Pezzolo e non serve avere molto tempo. Scegli come esserci.</p>
+    </div>
+    <ul class="modi">
+      <li class="modo">
+        <h3>Diventa socia o socio</h3>
+        <p>Entri a far parte dell'associazione e della sua assemblea. La quota è di 15 euro l'anno e si comincia con una domanda di ammissione.</p>
+        <a class="bottone bottone--linea" href="/partecipa/#socie-e-soci">Come associarsi</a>
+      </li>
+      <li class="modo">
+        <h3>Dai una mano</h3>
+        <p>Un'ora per la spesa di una vicina, un sabato sui sentieri, un pomeriggio di doposcuola. Decidi tu quanto e quando.</p>
+        <a class="bottone bottone--linea" href="/partecipa/#volontariato">Fai volontariato</a>
+      </li>
+      <li class="modo">
+        <h3>Collabora con noi</h3>
+        <p>Scuole, associazioni, enti e aziende: se avete un'idea per Pezzolo, costruiamola insieme.</p>
+        <a class="bottone bottone--oro" href="/partecipa/#collabora">Proponi una collaborazione</a>
+      </li>
+      <li class="modo">
+        <h3>Sostienici</h3>
+        <p>Anche un piccolo contributo diventa un sentiero pulito o un pomeriggio di doposcuola.</p>
+        <a class="bottone bottone--linea" href="/partecipa/#sostienici">Sostieni La Zagara</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sezione sezione--antica">
+  <div class="contenitore community">
+    <span class="community__icona">{{icona:whatsapp}}</span>
+    <div>
+      <h2>Community WhatsApp</h2>
+      <p>Niente newsletter e niente moduli: una community WhatsApp. Nel gruppo degli annunci ricevi eventi e novità, e gli altri iscritti non vedono il tuo numero.</p>
+      <div class="azioni">
+        <a class="bottone bottone--verde" href="{{sito.whatsapp}}">{{icona:whatsapp}}Entra nella community WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+{
+  "borgo-da-sotto": {
+    "alt": "Le case di Pezzolo, strette l'una all'altra sul fianco della montagna, viste dal basso",
+    "larghezze": [800, 1400],
+    "larghezza": 1400,
+    "altezza": 849,
+    "sizes": "(max-width: 52rem) 92vw, 42vw"
+  },
+  "chiesa-san-nicola": {
+    "alt": "La facciata in pietra della Chiesa Madre di San Nicola, con il campanile a sinistra",
+    "larghezze": [800, 1400],
+    "larghezza": 1400,
+    "altezza": 1077,
+    "sizes": "(max-width: 52rem) 92vw, 42vw"
+  },
+  "belvedere-stretto": {
+    "alt": "Rami d'oleandro in primo piano e, oltre le colline, il mare dello Stretto con la costa calabra",
+    "larghezze": [800, 1400],
+    "larghezza": 1400,
+    "altezza": 1292,
+    "sizes": "100vw"
+  }
+}

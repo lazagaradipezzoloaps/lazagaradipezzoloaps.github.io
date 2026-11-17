@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lazagaradipezzoloaps.github.io/sitemap.xml

@@ -1,0 +1,42 @@
+<!--
+titolo: Eventi – La Zagara di Pezzolo APS
+descrizione: Gli appuntamenti della Zagara di Pezzolo APS: laboratori, passeggiate, tornei e giornate di cura del borgo a Pezzolo (Messina).
+percorso: /eventi/
+classe: eventi
+-->
+<header class="intestazione">
+  <div class="contenitore">
+    <h1>Eventi</h1>
+    <div class="intestazione__testo">
+      <p>Laboratori, passeggiate, tornei, giornate di cura del borgo: ecco cosa c'è in programma.</p>
+    </div>
+  </div>
+  {{muretto:9:2}}
+</header>
+
+<section class="sezione">
+  <div class="contenitore">
+    <h2>Prossimi appuntamenti</h2>
+    {{eventi:prossimi}}
+  </div>
+</section>
+
+<section class="sezione sezione--antica" data-se-vuoto{{nascondi-se-nessun-passato}}>
+  <div class="contenitore">
+    <h2>Appuntamenti passati</h2>
+    {{eventi:passati}}
+  </div>
+</section>
+
+<section class="sezione">
+  <div class="contenitore community">
+    <span class="community__icona">{{icona:whatsapp}}</span>
+    <div>
+      <h2>Non perderti i prossimi</h2>
+      <p>Gli appuntamenti nuovi arrivano prima nella community WhatsApp. Nel gruppo degli annunci gli altri iscritti non vedono il tuo numero.</p>
+      <div class="azioni">
+        <a class="bottone bottone--verde" href="{{sito.whatsapp}}">{{icona:whatsapp}}Entra nella community WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>

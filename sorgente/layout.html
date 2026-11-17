@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{pagina.titolo}}</title>
+  <meta name="description" content="{{pagina.descrizione}}">
+  {{robots}}
+  <link rel="canonical" href="{{urlPagina}}">
+  <meta name="theme-color" content="#3E4C22">
+  <link rel="icon" href="/assets/img/fiore-zagara.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/fiore-zagara-128.png" type="image/png" sizes="128x128">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="La Zagara di Pezzolo APS">
+  <meta property="og:title" content="{{pagina.titolo}}">
+  <meta property="og:description" content="{{pagina.descrizione}}">
+  <meta property="og:url" content="{{urlPagina}}">
+  <meta property="og:image" content="{{sito.url}}/assets/img/anteprima-social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pezzolo tra i monti Peloritani, con il sigillo della Zagara di Pezzolo">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/sito.css?v={{versione}}">
+  <script>
+    (function (h) {
+      h.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        h.classList.add('movimento');
+        setTimeout(function () { h.classList.add('attesa-scaduta'); }, 2500);
+      }
+    })(document.documentElement);
+  </script>
+  <script type="module" src="/assets/js/main.js?v={{versione}}"></script>
+  {{testaExtra}}
+</head>
+<body class="pagina-{{pagina.classe}}">
+  <a class="salta" href="#contenuto">Vai al contenuto</a>
+
+  <header class="testata">
+    <div class="testata__interno">
+      <a class="marchio" href="/">
+        <img class="marchio__sigillo" src="/assets/img/logo-sigillo-128.webp" width="56" height="56" alt="">
+        <span class="marchio__testo">
+          <span class="marchio__nome">La Zagara di Pezzolo</span>
+          <span class="marchio__motto">Radici e Futuro APS</span>
+        </span>
+      </a>
+      <button class="menu-bottone" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-bottone__linee" aria-hidden="true"></span>
+        <span class="menu-bottone__testo">Menu</span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Menu principale">
+        <ul class="menu__lista">
+          {{menu}}
+          <li class="menu__partecipa"><a class="bottone bottone--oro" href="/partecipa/"{{partecipaAttuale}}>Partecipa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" tabindex="-1">
+{{contenuto}}
+  </main>
+
+  <footer class="piede">
+    {{muretto:11:2:muretto--piede}}
+    <div class="piede__interno contenitore">
+      <div class="piede__ente">
+        <p class="piede__nome">La Zagara di Pezzolo<br>Radici e Futuro APS</p>
+        <p>Associazione di Promozione Sociale – Ente del Terzo Settore</p>
+        <p>Sede legale: {{sito.indirizzo}}</p>
+        <p>C.F. {{sito.codiceFiscale}}</p>
+        <p>{{sito.runts}}</p>
+      </div>
+      <div class="piede__contatti">
+        <h2 class="piede__titolo">Scrivici</h2>
+        <p>Email: <a href="mailto:{{sito.email}}">{{sito.email}}</a></p>
+        <p>PEC: <a href="mailto:{{sito.pec}}">{{sito.pec}}</a></p>
+        <p><a class="piede__whatsapp" href="{{sito.whatsapp}}">{{icona:whatsapp:icona--piccola}}Community WhatsApp</a></p>
+      </div>
+      <nav class="piede__legale" aria-label="Documenti e informazioni legali">
+        <h2 class="piede__titolo">Documenti</h2>
+        <ul>
+          <li><a href="/statuto/">Statuto</a></li>
+          <li><a href="/trasparenza/">Trasparenza</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/privacy/#cookie">Cookie</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="piede__fondo contenitore">
+      <p>© 2026 La Zagara di Pezzolo APS</p>
+    </div>
+  </footer>
+</body>
+</html>
