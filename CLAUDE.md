@@ -56,8 +56,10 @@ Poi in GitHub → Settings → Pages: dominio personalizzato e "Enforce HTTPS".
 - La protezione civile è nello statuto ma non va sul sito.
 - Cariche sempre al femminile. Tono accogliente, giovane, inclusivo: "socie e soci",
   "volontarie e volontari". Si scrive "Radici e Futuro" (con la "e").
-- Niente newsletter e niente moduli: i contatti passano da email e community WhatsApp.
-  Il telefono per ora non va pubblicato. Non citare l'autore del libro delle storie.
+- Niente newsletter e niente moduli da compilare sul sito: i contatti passano da telefono
+  (353 417 7798, in `sito.json`), email e community WhatsApp. Non citare l'autore del libro delle storie.
+- La scheda di adesione per i nuovi soci è un PDF in `documenti/scheda-adesione-soci.pdf`
+  (link da Partecipa). Per aggiornarla basta sostituire il file con lo stesso nome.
 - Nelle comunicazioni restano denominazione con "APS", sede, codice fiscale e dati RUNTS (sono nel piede).
 
 ## Identità

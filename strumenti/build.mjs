@@ -195,6 +195,7 @@ function datiStrutturati() {
     url: sito.url + '/',
     logo: sito.url + '/assets/img/logo-sigillo-512.webp',
     email: sito.email,
+    telephone: sito.telefonoLink,
     taxID: sito.codiceFiscale,
     foundingDate: '2026-09-23',
     address: {
